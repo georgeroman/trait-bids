@@ -1,2 +1,6 @@
-cache/
-out/
+# Foundry
+cache
+out
+
+# Secrets
+.env
