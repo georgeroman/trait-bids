@@ -10,6 +10,11 @@ There are two main ways of creating trait bids:
 
 This project shows a basic integration of trait bids on 0x v4, using the signature-based oracle approach (via Trustus). Due to the exchange contract's limitations (not possible to verify a buy order directly against data provided by the taker) it uses a stateful approach (the oracle's attestation must be available on-chain before filling the order). However, with the usage of a router contract, we can have the attesation and the fill hapenning with a single on-chain transaction.
 
+### Todo
+
+- add support for ERC1155
+- integrate merkle root oracle attestations (eg. have the oracle submit the merkle root of all tokens matching a particular property) so that a single attesation is required per property (this will require the taker submitting a merkle proof when filling though, as in the merkle tree approach)
+
 ### Usage
 
 Make sure to patch a minor issue in `trustus` before running the tests (https://github.com/ZeframLou/trustus/issues/3).
